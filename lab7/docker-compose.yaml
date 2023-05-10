@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  test-service:
+    image: openjdk:8-jdk-alpine
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target:/app/target
+    command: ["java", "-jar", "/app/target/test.jar"]
